@@ -185,7 +185,7 @@ Columns:
 ecommerce-etl-pipeline/
 │
 ├── dags/
-│   └── omnishop_etl.py
+│   └── etl_dag.py
 │
 ├── extract/
 │   └── extract.py
