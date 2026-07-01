@@ -287,30 +287,32 @@ Benefits:
 
 # 📈 Sample Analytics Queries
 
-## Top Selling Products
+## Top 10 Best Selling Products
 
 ```sql
 SELECT product_id,
-       SUM(quantity) AS total_sales
+       SUM(quantity) AS total_quantity
 FROM fact_sales
 GROUP BY product_id
-ORDER BY total_sales DESC;
+ORDER BY total_quantity DESC
+LIMIT 10;
 ```
 
 ## Total Revenue
 
 ```sql
-SELECT SUM(revenue)
+SELECT SUM(total_amount) AS total_revenue
 FROM fact_sales;
 ```
 
 ## Customer Purchase Analysis
 
 ```sql
-SELECT customer_id,
-       COUNT(order_id)
+SELECT user_id,
+       COUNT(order_id) AS total_orders
 FROM fact_sales
-GROUP BY customer_id;
+GROUP BY user_id
+ORDER BY total_orders DESC;
 ```
 
 ---
