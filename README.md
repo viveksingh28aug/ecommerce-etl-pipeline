@@ -32,14 +32,56 @@ The project follows industry-standard ETL practices and includes:
 
 ✅ Analytics-Ready Data Warehouse
 
+
 ---
 
 # 📸 Project Screenshots
 
-* Apache Airflow DAG Execution
-* PostgreSQL Tables
-* Docker Containers Running
-* ETL Pipeline Logs
+## 🏗️ Project Architecture
+
+The following architecture illustrates the complete ETL workflow from raw CSV files to an analytics-ready PostgreSQL Data Warehouse.
+
+![Project Architecture](screenshots/architecture.png)
+
+---
+
+## 🚀 Apache Airflow DAG
+
+Apache Airflow DAG used to orchestrate and automate the ETL pipeline.
+
+![Airflow DAG](screenshots/airflow_dag.png)
+
+---
+
+## ✅ Successful ETL Pipeline Execution
+
+Successful execution of the ETL pipeline in Apache Airflow.
+
+![Airflow Success](screenshots/airflow_success.png)
+
+---
+
+## 🐳 Docker Containers
+
+Docker containers running all required services, including PostgreSQL, Redis, Airflow Scheduler, Webserver, Worker, and Triggerer.
+
+![Docker Containers](screenshots/docker_containers.png)
+
+---
+
+## 🗄️ PostgreSQL Data Warehouse
+
+PostgreSQL database containing the Star Schema tables (`dim_users`, `dim_products`, and `fact_sales`) used for analytics.
+
+![PostgreSQL Tables](screenshots/postgres_tables.png)
+
+---
+
+## 📊 SQL Analytics Queries
+
+Example SQL queries executed on the PostgreSQL Data Warehouse to validate the ETL pipeline and analyze the processed data.
+
+![SQL Queries](screenshots/sql_queries.png)
 
 ---
 
