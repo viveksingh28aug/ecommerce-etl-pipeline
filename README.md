@@ -83,37 +83,47 @@ Example SQL queries executed on the PostgreSQL Data Warehouse to validate the ET
 
 ![SQL Queries](screenshots/sql_queries.png)
 
+
 ---
 
-# 🏗️ Project Architecture
+## 🚀 Getting Started
 
-```text
-CSV Files
-    │
-    ▼
-Python ETL Pipeline
-    │
-    ▼
-Data Cleaning & Validation
-    │
-    ▼
-Star Schema Creation
-    │
-    ├── dim_users
-    ├── dim_products
-    └── fact_sales
-    │
-    ▼
-PostgreSQL Data Warehouse
-    │
-    ▼
-Apache Airflow DAG
-    │
-    ▼
-Business Analytics & Reporting
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/viveksingh28aug/ecommerce-etl-pipeline.git
+cd ecommerce-etl-pipeline
 ```
 
+### 2. Configure Environment Variables
+
+Create a `.env` file using `.env.example` and update your PostgreSQL credentials.
+
+### 3. Start Docker Containers
+
+```bash
+docker compose up -d
+```
+
+### 4. Launch Apache Airflow
+
+Open:
+
+```
+http://localhost:8080
+```
+
+### 5. Trigger the ETL DAG
+
+Open the Apache Airflow UI, enable the `etl_dag` DAG, and click **Trigger DAG** to execute the ETL pipeline.
+
+### 6. Verify PostgreSQL Tables
+
+Connect to PostgreSQL and verify the `dim_users`, `dim_products`, and `fact_sales` tables.
+
 ---
+
+
 
 # 📊 Project Snapshot
 
@@ -251,6 +261,14 @@ ecommerce-etl-pipeline/
 │
 ├── logs/
 │
+├── screenshots/
+│   ├── airflow_dag.png
+│   ├── airflow_success.png
+│   ├── architecture.png
+│   ├── docker_containers.png
+│   ├── postgres_tables.png
+│   └── sql_queries.png
+
 ├── requirements.txt
 ├── docker-compose.yml
 ├── .env.example
